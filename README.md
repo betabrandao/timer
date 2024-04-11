@@ -1,5 +1,7 @@
 # App de Timer
 
+O historico dos commits estão em [https://github.com/betabrandao/labs-fepi](https://github.com/betabrandao/labs-fepi)
+
 Este projeto foi desenvolvido em HTML e CSS com javascript para uso no Desktop e teve um objetivo de criar um timer regressivo.
 
 A ideia foi experimentar os conceitos de HTML e CSS.
