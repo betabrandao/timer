@@ -1,0 +1,49 @@
+<!--Criado no vim pela Roberta Brandao
+ -- Reaprendendo a usar html, css e javascript para as aulas na faculdade kk
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Timer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+    <menu id="menu">
+      <menuitem>Add Background:</menuitem>
+      <menuitem><input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*"></menuitem>
+    </menu>
+  </header>
+  <div class="hiddenAll" id="timeDiv">
+    <div id="timer">00:00:00</div>
+  </div>
+  <div class="container" id="container">
+    <div class="divHour">
+      <span>Hour</span>
+      <button type="button" onClick="updateElementById('inputHour',true)">+</button>
+      <input type="number" name="hour" id="inputHour" value="0">
+      <button type="button" onClick="updateElementById('inputHour',false)">-</button>
+      <h3>:</h3>
+    </div>
+
+    <div class="divMinute">
+      <span>Min</span>
+      <button type="button" onClick="updateElementById('inputMinute',true)">+</button>
+      <input type="number" name="minute" id="inputMinute" value="0">
+      <button type="button" onClick="updateElementById('inputMinute',false)">-</button>
+      <h3>:</h3>
+    </div>
+
+    <div class="divSecond">
+      <button type="button" onClick="updateElementById('inputSecond',true)">+</button>
+      <input type="number" name="second" id="inputSecond" value="0">
+      <button type="button" onClick="updateElementById('inputSecond',false)">-</button>
+    </div>
+    <br />
+  </div>
+  <button type="button" id="buttonStart" class="buttonStart" onClick="eventButton();">Start</button>
+  <script language="javascript" src="./js/methods.js"> </script>
+  </body>
+</html>
