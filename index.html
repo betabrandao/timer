@@ -9,11 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/styles.css" rel="stylesheet">
   </head>
-  <body>
+  <body bg-color="0">
   <header>
     <menu id="menu">
-      <menuitem>Add Background:</menuitem>
-      <menuitem><input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*"></menuitem>
+      <menuitem>
+      <input type="range" name="bg-color" onChange="changeColor(this.value);" min="0" max="320" step="20"/>
+      </menuitem>
+      <menuitem><label for="file">Add Background</label>
+      <input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*">
+      </menuitem>
     </menu>
   </header>
   <div class="hiddenAll" id="timeDiv">

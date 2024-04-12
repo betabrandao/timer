@@ -4,6 +4,7 @@ body {
   height: 100vh;
   margin: 0;
   background-size: cover;
+  background-color: hsl(attr(bg-color) 50% 50%);
 }
 
 .container {
