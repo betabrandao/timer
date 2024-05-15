@@ -11,14 +11,17 @@
   </head>
   <body bg-color="0">
   <header>
-    <menu id="menu">
-      <menuitem>
-      <input type="range" name="bg-color" onChange="changeColor(this.value);" min="0" max="320" step="20"/>
-      </menuitem>
-      <menuitem><label for="file">Add Background</label>
-      <input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*">
-      </menuitem>
-    </menu>
+    <nav id="menu">
+      <ul>
+        <li> 
+         <input type="range" name="bg-color" onChange="changeColor(this.value);" min="0" max="320" step="20"/>
+        </li>
+        <li>
+          <label for="file">Add Background</label>
+          <input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*">
+        </li>
+      </ul>
+    </nav>
   </header>
   <div class="hiddenAll" id="timeDiv">
     <div id="timer">00:00:00</div>
@@ -26,7 +29,7 @@
   <div class="container" id="container">
     <div class="divHour">
       <span>Hour</span>
-      <button type="button" onClick="updateElementById('inputHour',true)">+</button>
+      <button type= "button" onClick="updateElementById('inputHour',true)">+</button>
       <input type="number" name="hour" id="inputHour" value="0">
       <button type="button" onClick="updateElementById('inputHour',false)">-</button>
       <h3>:</h3>

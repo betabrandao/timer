@@ -115,9 +115,9 @@ function countdown(phour, pminute, psecond) {
   // metodos de imagem
 "use strict";
 
-input.addEventListener("input", (event) => {
-  document.body.style.backgroundColor = 'hsl('+ event.target.value +'50% 50%)';
-});
+function changeColor(color) {
+  document.body.style.backgroundColor = 'hsl('+ color +' 50% 50%)'; 
+}
 
 const fileDataURL = file => new Promise((resolve,reject) => {
   let fr = new FileReader();
