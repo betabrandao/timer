@@ -31,8 +31,8 @@ body {
  font-size: 9em;
  background-color: white;
  width: fit-content;
- padding: 15px;
- border-radius: 80px;
+ padding: 20px;
+ border-radius: 30px 80px 30px 80px;;
  text-align: center;
  margin: 0 auto;
 }

@@ -13,11 +13,12 @@
   <header>
     <nav id="menu">
       <ul>
-        <li> 
-         <input type="range" name="bg-color" onChange="changeColor(this.value);" min="0" max="320" step="20"/>
+        <li>
+          <label>Change Color:</label>
+         <input type="range" name="bg-color" onChange="changeColor(this.value);" min="0" max="4" step="1"/> 
         </li>
         <li>
-          <label for="file">Add Background</label>
+          <label for="file">Change Background</label>
           <input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*">
         </li>
       </ul>

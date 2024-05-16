@@ -115,8 +115,18 @@ function countdown(phour, pminute, psecond) {
   // metodos de imagem
 "use strict";
 
-function changeColor(color) {
-  document.body.style.backgroundColor = 'hsl('+ color +' 50% 50%)'; 
+function changeColor(param) {
+
+  let color = [
+    'hsl(0, 0%, 100%)',
+    'hsl(0, 0%, 25%)',
+    'hsl(107, 29%, 23%)',
+    'hsl(201, 29%, 23%)',
+    'hsl(224, 77%, 30%)'
+  ];
+
+  document.body.style.backgroundColor = (color[param] || 'hsl(0 0% 100%)') ; 
+  //document.body.style.backgroundColor = 'hsl('+ param +' 50% 50%)'; 
 }
 
 const fileDataURL = file => new Promise((resolve,reject) => {
