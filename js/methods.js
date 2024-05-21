@@ -117,16 +117,23 @@ function countdown(phour, pminute, psecond) {
 
 function changeColor(param) {
 
-  let color = [
-    'hsl(0, 0%, 100%)',
-    'hsl(0, 0%, 25%)',
-    'hsl(107, 29%, 23%)',
-    'hsl(201, 29%, 23%)',
-    'hsl(224, 77%, 30%)'
+  let bgcolor = [
+    'background-color: #FFF; transition: background-color 0.5s ease-in;',
+    'background-color: #666; transition: background-color 0.5s ease-in;', // number of beast :P
+    'background: linear-gradient(to right, red , yellow); transition: background-color 0.5s ease-in;', // hot color
+    'background: linear-gradient(45deg, red,orange,yellow,green,blue,indigo,violet); transition: background-color 0.5s ease-in;', // rainbow  
+  ];
+  let color   = [
+    'color: #000;',
+    'color: #FFF;',
+    'color: #FFF;',
+    'color; #333;'
   ];
 
-  document.body.style.backgroundColor = (color[param] || 'hsl(0 0% 100%)') ; 
-  //document.body.style.backgroundColor = 'hsl('+ param +' 50% 50%)'; 
+
+  document.body.setAttribute('style', bgcolor[param]);
+  document.body.setAttribute('style', color[param]);
+   
 }
 
 const fileDataURL = file => new Promise((resolve,reject) => {
@@ -145,3 +152,4 @@ function showResult(file) {
 
 // Init Script;    
 checkStates();
+changeColor(0);
