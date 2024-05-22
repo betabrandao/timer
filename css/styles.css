@@ -1,8 +1,16 @@
 body {
   font-family: Arial, Verdana;
   position: relative; 
+  width: 100%;
   height: 100vh;
   margin: 0;
+}
+
+.text-title {
+  padding: 15px;
+  font-size: 2rem;
+  font-family: Times;
+  font-weight: bold;
 }
 
 /*
@@ -10,45 +18,49 @@ body {
  * */
 
 .body-effect-01 {
-  color: #000; 
-  background-color: #FFF; 
-  transition: background-color 0.5s ease-in;
+  color: #000!important; 
+  background-color: #FFF!important; 
+  transition: background-color 0.5s ease-in!important;
 }
 
 .body-effect-02 {
-  color: #FFF;
-  background-color: #666;
-  transition: background-color 0.5s ease-out;
+  color: #FFF!important;
+  background: #666!important;
+  transition: background-color 0.5s ease-out!important;
     #timer {
     background: black !important;
+  }
+  .text-title {
+    font-family: Verdana !important;
   }
 
 }
 
 .body-effect-03 {
-  color: #FFF;
-  background: linear-gradient(to right, red , yellow);
-  transition: background-image 0.5s ease-in;
-  background-size: 150% 150%;
-  animation: gradient 10s ease infinite;
+  color: #FFF!important;
+  background: linear-gradient(to right, red , yellow)!important;
+  transition: background-image 0.5s ease-in!important;
+  background-size: 150% 150%!important;
+  animation: gradient 10s ease infinite!important;
   
   #timer {
     background: transparent !important;
   }
 
+
 }
 
 .body-effect-04 {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)!important;
+  background-size: 400% 400%!important;
+  animation: gradient 15s ease infinite!important;
 }
 
 .body-effect-05 {
-  color: #000; 
-  background: url('/img/anime-room-background-01.gif');
-  background-size: 100%;
-  height: 100vh;
+  color: #000!important; 
+  background: url('/img/anime-room-background-01.gif')!important;
+  background-size: 100%!important;
+  height: 100vh!important;
   
   #timer {
     background-color: #FFFFFF53 !important;;
@@ -56,17 +68,17 @@ body {
 }
 
 .body-effect-06 {
-  color: #000; 
-  background: url('/img/anime-room-background-02.gif');
-  background-size: 100%;
-  height: 100vh;
+  color: #000!important; 
+  background: url('/img/anime-room-background-02.gif')!important;
+  background-size: 100%!important;
+  height: 100vh!important;
 }
 
 .body-effect-07 {
-  color: #FFF; 
-  background: url('/img/anime-room-background-03.gif');
-  background-size: 100%;
-  height: 100vh;
+  color: #FFF!important; 
+  background: url('/img/anime-room-background-03.gif')!important;
+  background-size: 100%!important;
+  height: 100vh!important;
   
   #timer {
     background: transparent !important;
@@ -94,6 +106,7 @@ body {
 /*
  * End body effects 
  * */
+
 
 .container {
   position: absolute; 
@@ -198,4 +211,15 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
+.theme-options {
+  
+  ul {
+    list-style-type: none;
+    li {
+      margin: 3px;
+
+    }
+
+  }
+} 
 

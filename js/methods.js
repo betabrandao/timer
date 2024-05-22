@@ -8,6 +8,10 @@ function disableButtonsById(id, value) {
   document.getElementById(id).disabled = value;
 }
 
+function textTitle(value) {
+    document.getElementById("text-title").innerHTML = value;
+}
+
 function updateElementById(id, increment) {
   let value = parseInt(document.getElementById(id).value);
   if (increment) { value++; } else { value--;}

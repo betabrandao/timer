@@ -40,16 +40,27 @@
       <input type="number" name="second" id="inputSecond" value="0">
       <button type="button" onClick="updateElementById('inputSecond',false)">-</button>
     </div>
-    <br />
-        <div>
-          <label>Change Background Theme:</label>
-         <input type="range" name="bg-color" onChange="changeTheme(this.value);" min="0" max="6" step="1" value="0"/> 
-        </div>
-        <div>
-          <label for="file">Customize:</label>
+    <br />y Focus Timer 
+    <div class="theme-options">
+      <a href="#">Theme Options</a>
+        <ul class="theme-options-menu">
+         <li> 
+          <label for="bg-color">Change Background Theme:</label>
+          <input type="range" name="bg-color" onChange="changeTheme(this.value);" min="0" max="6" step="1" value="0"/> 
+         </li>
+         <li>
+          <label for="file">Customize Background image:</label>
           <input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*">
-        </div>
+          </li>
+          <li>
+          <label for="text-title">Change Text Title:</label>
+          <input type="text" name="text" value="Focus Time" onKeyUp="textTitle(this.value)" />
+          </li>
+        </ul>
+    </div>
   </div>
+  <br />
+  <br />
   <button type="button" id="buttonStart" class="buttonStart" onClick="eventButton();">Start</button>
   <script language="javascript" src="./js/methods.js"> </script>
   </body>
