@@ -4,25 +4,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Timer</title>
+    <title>Focus Timer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/styles.css" rel="stylesheet">
   </head>
   <body bg-color="0">
   <header>
-    <nav id="menu">
-      <ul>
-        <li>
-          <label>Change Color:</label>
-         <input type="range" name="bg-color" onChange="changeColor(this.value);" min="1" max="4" step="1" value="1"/> 
-        </li>
-        <li>
-          <label for="file">Change Background</label>
-          <input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*">
-        </li>
-      </ul>
-    </nav>
+    <div class="text-title" id="text-title">
+      My Focus Timer
+    </div>
   </header>
   <div class="hiddenAll" id="timeDiv">
     <div id="timer">00:00:00</div>
@@ -50,6 +41,14 @@
       <button type="button" onClick="updateElementById('inputSecond',false)">-</button>
     </div>
     <br />
+        <div>
+          <label>Change Background Theme:</label>
+         <input type="range" name="bg-color" onChange="changeTheme(this.value);" min="0" max="6" step="1" value="0"/> 
+        </div>
+        <div>
+          <label for="file">Customize:</label>
+          <input type="file" id="file" onChange="showResult(this.files[0]);" accept="image/*">
+        </div>
   </div>
   <button type="button" id="buttonStart" class="buttonStart" onClick="eventButton();">Start</button>
   <script language="javascript" src="./js/methods.js"> </script>

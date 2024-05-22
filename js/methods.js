@@ -67,11 +67,9 @@ function timerVisibility(type) {
   if (!type) {
     document.getElementById("container").className = "container";  
     document.getElementById("timeDiv").className = "hiddenAll";
-    document.getElementById("menu").className = "displayAll";  
   } else {  
     document.getElementById("container").className = "hiddenAll";  
     document.getElementById("timeDiv").className = "timeDiv";  
-    document.getElementById("menu").className = "hiddenAll";  
   }
 
 }
@@ -115,25 +113,21 @@ function countdown(phour, pminute, psecond) {
   // metodos de imagem
 "use strict";
 
-function changeColor(param) {
+function changeTheme(param) {
 
-  let bgcolor = [
-    'background-color: #FFF; transition: background-color 0.5s ease-in;',
-    'background-color: #666; transition: background-color 0.5s ease-in;', // number of beast :P
-    'background: linear-gradient(to right, red , yellow); transition: background-color 0.5s ease-in;', // hot color
-    'background: linear-gradient(45deg, red,orange,yellow,green,blue,indigo,violet); transition: background-color 0.5s ease-in;', // rainbow  
-  ];
-  let color   = [
-    'color: #000;',
-    'color: #FFF;',
-    'color: #FFF;',
-    'color; #333;'
+  let style = [
+    'body-effect-01',
+    'body-effect-02',
+    'body-effect-03',
+    'body-effect-04',
+    'body-effect-05',
+    'body-effect-06',
+    'body-effect-07',
   ];
 
-
-  document.body.setAttribute('style', bgcolor[param]);
-  document.body.setAttribute('style', color[param]);
-   
+  document.body.setAttribute('class', (style[param] || style[0]));
+  //document.body.setAttribute('style', color[param]);
+   return true;
 }
 
 const fileDataURL = file => new Promise((resolve,reject) => {
@@ -152,4 +146,4 @@ function showResult(file) {
 
 // Init Script;    
 checkStates();
-changeColor(0);
+//changeColor(0);
