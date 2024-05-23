@@ -145,10 +145,11 @@ const fileDataURL = file => new Promise((resolve,reject) => {
 function showResult(file) {
   fileDataURL(file)
   .then( data => (
-    document.body.style.backgroundImage = "url('" + data + "')"
+-zabbix agent
+    document.documentElement.style.setProperty('--theme-file-bg', "url('" + data + "')");
+    //document.body.style.backgroundImage = "url('" + data + "')";
   )).catch(err => console.log(err));
 }
 
 // Init Script;    
 checkStates();
-//changeColor(0);
