@@ -1,3 +1,14 @@
+:root {
+  --theme-01-bg: #FFF; 
+  --theme-02-bg: #666;
+  --theme-03-bg: linear-gradient(to right, red , yellow);
+  --theme-04-bg: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  --theme-05-bg: url('/img/anime-room-background-01.gif');
+  --theme-06-bg: url('/img/anime-room-background-02.gif');
+  --theme-07-bg: url('/img/anime-room-background-03.gif');
+  --theme-file-bg: 'file';
+}
+
 body {
   font-family: Arial, Verdana;
   position: relative; 
@@ -13,19 +24,69 @@ body {
   font-weight: bold;
 }
 
+
+/*
+ * Theme Menu
+ * */
+.theme-options {
+  width: 250px;
+  position: relative;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 40px;
+    list-style-type: none;
+    
+    li {
+      border-radius: 5px;
+      border: 2px solid #DDD;
+      margin: 3px;
+      background-size: 32px; 
+      height: 35px;
+    }
+
+   .theme-01 {
+     background-color: var(--theme-01-bg); 
+   }
+   .theme-02 {
+     background-color: var(--theme-02-bg); 
+   }
+   .theme-03 {
+     background: var(--theme-03-bg);
+   }
+   .theme-04 {
+     background: var(--theme-04-bg);
+   }
+   .theme-05 {
+     background: var(--theme-05-bg);
+   }
+   .theme-06 {
+     background: var(--theme-06-bg);
+   }
+   .theme-07 {
+     background: var(--theme-07-bg);
+   }
+   .theme-file {
+     background: var(--theme-file-bg);
+   }
+  }
+} 
+
+
 /*
  * Body Effects
  * */
 
 .body-effect-01 {
   color: #000!important; 
-  background-color: #FFF!important; 
+  background-color: var(--theme-01-bg)!important; 
   transition: background-color 0.5s ease-in!important;
 }
 
 .body-effect-02 {
   color: #FFF!important;
-  background: #666!important;
+  background: var(--theme-02-bg);!important;
   transition: background-color 0.5s ease-out!important;
     #timer {
     background: black !important;
@@ -38,7 +99,7 @@ body {
 
 .body-effect-03 {
   color: #FFF!important;
-  background: linear-gradient(to right, red , yellow)!important;
+  background: var(--theme-03-bg)!important;
   transition: background-image 0.5s ease-in!important;
   background-size: 150% 150%!important;
   animation: gradient 10s ease infinite!important;
@@ -51,14 +112,14 @@ body {
 }
 
 .body-effect-04 {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)!important;
+  background: var(--theme-04-bg)!important;
   background-size: 400% 400%!important;
   animation: gradient 15s ease infinite!important;
 }
 
 .body-effect-05 {
   color: #000!important; 
-  background: url('/img/anime-room-background-01.gif')!important;
+  background: var(--theme-05-bg)!important;
   background-size: 100%!important;
   height: 100vh!important;
   
@@ -69,21 +130,31 @@ body {
 
 .body-effect-06 {
   color: #000!important; 
-  background: url('/img/anime-room-background-02.gif')!important;
+  background: var(--theme-06-bg)!important;
   background-size: 100%!important;
   height: 100vh!important;
 }
 
 .body-effect-07 {
   color: #FFF!important; 
-  background: url('/img/anime-room-background-03.gif')!important;
+  background: var(--theme-07-bg)!important;
   background-size: 100%!important;
   height: 100vh!important;
   
   #timer {
     background: transparent !important;
   }
+}
 
+.body-effect-08 {
+  color: #FFF!important;
+  background: var(--theme-file-bg)!important;
+  background-size: 100% 100%!important;
+  height: 100vh;
+
+  #timer {
+    background-color: #FFFFFF53 !important;;
+  }
 }
 
 
@@ -194,7 +265,13 @@ body {
 .divSecond button{
   width: 2rem;
   font-size: 30px;
-} 
+}
+
+input[type=file] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
 
 input[type=number] {
   font-size: 2em;
@@ -211,15 +288,4 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
-.theme-options {
-  
-  ul {
-    list-style-type: none;
-    li {
-      margin: 3px;
-
-    }
-
-  }
-} 
 

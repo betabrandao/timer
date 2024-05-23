@@ -127,6 +127,7 @@ function changeTheme(param) {
     'body-effect-05',
     'body-effect-06',
     'body-effect-07',
+    'body-effect-08',
   ];
 
   document.body.setAttribute('class', (style[param] || style[0]));
