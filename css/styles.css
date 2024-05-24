@@ -32,6 +32,7 @@ body {
   width: 250px;
   position: relative;
 
+
   ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -44,6 +45,9 @@ body {
       margin: 3px;
       background-size: 32px; 
       height: 35px;
+    label {
+      background-color: white;
+      }
     }
 
    .theme-01 {
@@ -67,8 +71,9 @@ body {
    .theme-07 {
      background: var(--theme-07-bg);
    }
-   .theme-file {
+   .theme-08 {
      background: var(--theme-file-bg);
+     background-size: 200%;
    }
   }
 } 
