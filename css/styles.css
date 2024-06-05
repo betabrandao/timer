@@ -3,9 +3,9 @@
   --theme-02-bg: #666;
   --theme-03-bg: linear-gradient(to right, red , yellow);
   --theme-04-bg: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  --theme-05-bg: url('/img/anime-room-background-01.gif');
-  --theme-06-bg: url('/img/anime-room-background-02.gif');
-  --theme-07-bg: url('/img/anime-room-background-03.gif');
+  --theme-05-bg: url('./img/anime-room-background-01.gif');
+  --theme-06-bg: url('./img/anime-room-background-02.gif');
+  --theme-07-bg: url('./img/anime-room-background-03.gif');
   --theme-file-bg: 'file';
 }
 
