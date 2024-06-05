@@ -130,7 +130,8 @@
   function showResult(file) {
     fileDataURL(file)
     .then( data => (
-      document.body.style.backgroundImage = "url('" + data + "')"
+      document.documentElement.style.setProperty('--theme-file-bg',"url('" + data + "')");
+      //document.body.style.backgroundImage = "url('" + data + "')"
     )).catch(err => console.log(err));
 
   }
