@@ -37,7 +37,7 @@ jobs:
       #- name: Generate Static Page
       #  run: ./treelink/linkgen.sh
       - name: Generate Static Page
-        run: mkdir -p public/ && cp *.html ./public && cp -r js css ./public
+        run: mkdir -p public/ && cp *.html ./public && cp -r js css img ./public
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
