@@ -6,7 +6,7 @@
 var clear = false;
 
 // audio for finished
-const audio = new Audio('/door-bell.mp3');
+const audio = new Audio('./door-bell.mp3');
 //volume
 audio.volume = 0.4;
 
