@@ -1,15 +1,21 @@
 // metodos timer
 //
-// criado por Beta Brandao
+// criado por Beta Brandao para o curso de front-end na faculdade, 
+// materia para manipular o DOM do navegador
 
 var clear = false;
+
+// audio for finished
+const audio = new Audio('/door-bell.mp3');
+//volume
+audio.volume = 0.4;
 
 function disableButtonsById(id, value) {
   document.getElementById(id).disabled = value;
 }
 
 function textTitle(value) {
-    document.getElementById("text-title").innerHTML = value;
+    document.getElementById("text-title").innerHTML = (value || 'My Focus Time');
 }
 
 function updateElementById(id, increment) {
@@ -29,6 +35,7 @@ function parseVal(val) {
     return val;
   }
 }
+
 
 function eventButton() {
   let button =  document.getElementById("buttonStart");
@@ -103,13 +110,21 @@ function countdown(phour, pminute, psecond) {
     // Display the result in the element with id="Timer"
     
     document.getElementById("timer").innerHTML = parseVal(hours) + ":" + parseVal(minutes) + ":" + parseVal(seconds);
+
   
     // If the count down is finished, write some text
     if (distance < 0 || clear != false) {
       clearInterval(x);
-      document.getElementById("timer").innerHTML = "00:00:00";   //clearF();
-      timerVisibility(false);
-      document.getElementById("buttonStart").textContent = "Start";
+      document.getElementById("timer").innerHTML = "00:00:00";
+      //play audio
+      audio.play();
+
+      //set a 2 sec of delay
+      setTimeout(() => {
+        timerVisibility(false);
+        document.getElementById("buttonStart").textContent = "Start";
+        /* Code to run after 4 seconds */
+      }, 2000);
     }
   }, 1000);
   }
